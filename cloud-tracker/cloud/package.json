@@ -1,0 +1,19 @@
+{
+  "name": "cloud",
+  "version": "1.0.0",
+  "main": "sendReminders.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@sendgrid/mail": "^8.1.6",
+    "dayjs": "^1.11.18",
+    "dotenv": "^17.2.3",
+    "firebase-admin": "^13.5.0",
+    "nodemailer": "^7.0.9"
+  },
+  "description": ""
+}

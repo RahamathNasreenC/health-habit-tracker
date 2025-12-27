@@ -1,0 +1,131 @@
+body {
+  margin: 0;
+  font-family: 'Inter', Arial, sans-serif;
+  background: #f4f7fb;
+  color: #222;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.sidebar {
+  height: 100vh;
+  width: 220px;
+  background: #007bff;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 20px 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.sidebar h2 {
+  color: white;
+  font-size: 1.7rem;
+  margin: 0 0 20px 20px;
+  font-weight: 700;
+}
+
+.sidebar a {
+  color: white;
+  padding: 15px 30px;
+  font-weight: 600;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  transition: background 0.35s ease;
+}
+
+.sidebar a.active,
+.sidebar a:hover {
+  background: #0056d2;
+}
+
+.logout-button {
+  margin: top 2px;;
+  margin-left: 20px;
+  background-color: #dc3545;
+  border: none;
+  padding: 12px 30px;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #bd2130;
+}
+
+.content {
+  margin-left: 220px;
+  padding: 20px 30px;
+  width: calc(100% - 220px);
+  height: 100vh;
+  overflow-y: auto;
+  background: #f4f7fb;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  margin-bottom: 20px;
+  max-width: 900px;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 6px;
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+button:hover {
+  background: #0056d2;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+footer {
+  text-align: center;
+  color: #888;
+  margin-top: 20px;
+}
+
+@media (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+  }
+  .sidebar a {
+    flex: 1;
+    padding: 12px;
+    text-align: center;
+  }
+  .content {
+    margin-left: 0;
+    padding: 15px;
+    width: 100%;
+    height: auto;
+  }
+}

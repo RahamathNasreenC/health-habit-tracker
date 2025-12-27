@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mind Bloom+ 🌱</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+
+  <!-- Firebase Init -->
+  <script>
+    const firebaseConfig = {
+  apiKey: "AIzaSyAeMsrCzeFM8jqnFoKmSu-mOU8lkq0VODk",
+  authDomain: "new1-2e362.firebaseapp.com",
+  projectId: "new1-2e362",
+  storageBucket: "new1-2e362.firebasestorage.app",
+  messagingSenderId: "574418504369",
+  appId: "1:574418504369:web:27d3ee530b84dd75c43090",
+  measurementId: "G-14B1BH099T"
+};
+
+    firebase.initializeApp(firebaseConfig);
+  </script>
+</head>
+<body>
+  <!-- Background animation container -->
+  <div class="background-animation">
+    <canvas id="gardenCanvas"></canvas>
+  </div>
+
+  <div class="app-container">
+    <header>
+      <h1>🌿 Mind Bloom+</h1>
+      <p class="subtitle">Relax, play, and grow your mind garden while learning mental health tips</p>
+    </header>
+
+    <div id="start-screen">
+      <button id="start-btn" class="btn">Start Quiz</button>
+    </div>
+
+    <div id="quiz-container" class="hidden">
+      <div class="question-card fade-in">
+        <h2 id="question"></h2>
+        <p id="desc" class="question-desc"></p>
+        <div id="options"></div>
+      </div>
+      <p id="message" class="message"></p>
+      <button id="next-btn" class="btn hidden">Next</button>
+    </div>
+
+    <div id="result-screen" class="hidden fade-in">
+      <h2>🌸 Your Mind Garden 🌸</h2>
+      <p id="score"></p>
+      <div id="garden"></div>
+      <p class="tipline">Each flower represents a positive habit you’ve grown today 🌼</p>
+      <button id="restart-btn" class="btn">Restart</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="livingGarden.js"></script>
+</body>
+</html>

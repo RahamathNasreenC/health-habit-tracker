@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Health Habit Tracker - Login</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-storage-compat.js"></script>
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #92dff3, #d4fc79);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background: white;
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 350px;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+      color: #2c3e50;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #34495e;
+    }
+
+    input {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 15px;
+    }
+
+    button {
+      width: 95%;
+      padding: 10px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 8px;
+      background-color: #2ecc71;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #27ae60;
+    }
+
+   
+    #authMsg {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    .or-line {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 15px 0;
+      color: #888;
+    }
+
+    .or-line::before,
+    .or-line::after {
+      content: "";
+      height: 1px;
+      width: 40%;
+      background-color: #ccc;
+      margin: 0 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Health Habit Tracker</h1>
+    <section class="card login-card">
+      <h2>Login / Register</h2>
+
+      <input id="email" type="email" autocomplete="off" placeholder="Enter your Email">
+      <input id="password" type="password" autocomplete="new-password" placeholder="Enter your Password">
+
+      <button id="registerBtn" type="button">Register</button>
+      <button id="loginBtn" type="button">Login</button>
+
+      <div class="or-line"></div>
+      
+
+      <p id="authMsg"></p>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

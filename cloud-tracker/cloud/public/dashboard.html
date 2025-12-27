@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Dashboard - Health Habit Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-storage-compat.js"></script>
+</head>
+<body>
+  <nav class="sidebar">
+    <h2>Health Tracker</h2>
+    <a href="dashboard.html" class="active">Dashboard</a>
+    <a href="profile.html">Profile</a>
+    <a href="entries.html">Entries</a>
+    <a href="quizz/index.html">Quiz</a> 
+     <a href="reminders.html" class="active">Reminders</a>
+    <button id="logoutBtn" class="logout-button">Logout</button>
+  </nav>
+
+  <main class="content">
+    <h1>Dashboard Summary</h1>
+    <section class="card">
+      <canvas id="stepsChart" style="max-width: 100%; height: 300px;"></canvas>
+      <div id="entriesList"></div>
+      <div id="weeklySummary" style="margin-top:15px; font-weight:bold;"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+  <script src="dashboard.js"></script>
+</body>
+</html>

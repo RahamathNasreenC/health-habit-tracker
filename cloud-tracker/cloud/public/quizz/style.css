@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+.background-animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  background: linear-gradient(160deg, #a0e9ff, #c2f0c2);
+}
+
+.app-container {
+  position: absolute;       /* changed from relative */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);  /* perfectly centers */
+  z-index: 2;
+  width: 90%;
+  max-width: 480px;
+  background: #ffffffdd;
+  border-radius: 20px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+  animation: floatIn 1.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header h1 {
+  color: #4a7c59;
+  font-size: 2em;
+  margin: 0;
+}
+
+.subtitle {
+  color: #6c757d;
+  font-size: 0.95em;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background: linear-gradient(135deg, #7bc79f, #4a7c59);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 22px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #4a7c59, #3b6547);
+}
+
+.question-card {
+  background: #f5fff9;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.question-desc {
+  color: #555;
+  font-size: 0.9em;
+  margin-bottom: 10px;
+}
+
+.option {
+  background: #e4f5ed;
+  border: 2px solid #4a7c59;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 8px 0;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.option:hover {
+  background: #d2f3e3;
+  transform: scale(1.02);
+}
+
+.correct {
+  background: #b3f7b3 !important;
+  border-color: #3b6547 !important;
+  animation: blowUp 0.5s ease forwards;
+}
+
+.wrong {
+  background: #f7b3b3 !important;
+  animation: shake 0.4s ease;
+}
+
+.message {
+  margin-top: 15px;
+  color: #4a7c59;
+  font-weight: 500;
+  min-height: 25px;
+}
+
+#garden {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.flower {
+  font-size: 2em;
+  margin: 5px;
+  animation: grow 0.6s ease;
+}
+
+.tipline {
+  font-size: 0.85em;
+  color: #555;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Animations */
+@keyframes grow {
+  from { transform: scale(0); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes shake {
+  0%,100% { transform: translateX(0); }
+  25% { transform: translateX(-6px); }
+  75% { transform: translateX(6px); }
+}
+
+@keyframes blowUp {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+
+@keyframes floatIn {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: floatIn 0.6s ease;
+}

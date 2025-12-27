@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Profile - Health Habit Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-storage-compat.js"></script>
+</head>
+<body>
+  <nav class="sidebar">
+    <h2>Health Tracker</h2>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="profile.html" class="active">Profile</a>
+    <a href="entries.html">Entries</a>
+    <button id="logoutBtn" class="logout-button">Logout</button>
+  </nav>
+
+  <main class="content">
+    <h1>Profile & Goals</h1>
+    <section class="card">
+      <label for="displayName">Display Name</label>
+      <input id="displayName" type="text" />
+
+      <label for="profilePic">Profile Picture</label>
+      <input id="profilePic" type="file" accept="image/*" />
+      <button id="uploadPicBtn" type="button">Upload Picture</button><br />
+      <img
+        id="avatar"
+        alt="Avatar"
+        style="display:none; width: 100px; border-radius: 10px; margin-top: 10px"
+      />
+
+      <label for="goalSteps">Steps per day goal</label>
+      <input id="goalSteps" type="number" />
+
+      <label for="goalSleep">Sleep hours goal</label>
+      <input id="goalSleep" type="number" step="0.1" />
+
+      <label for="goalWater">Water (litres) goal</label>
+      <input id="goalWater" type="number" step="0.1" />
+
+      <button id="saveGoalsBtn" type="button">Save Goals</button>
+      <p id="profileMsg" style="color: green; margin-top: 10px"></p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+  <script src="profile.js"></script>
+</body>
+</html>

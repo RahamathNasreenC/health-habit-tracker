@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Reminders</title>
+  <link rel="stylesheet" href="style1.css">
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+</head>
+<body>
+  <div class="container">
+    <button onclick="window.history.back()" style="float:right; margin:10px;">⬅ Back</button>
+    <h1>Set Your Habit Reminders</h1>
+
+    <section class="card">
+      <h2>Set Reminder</h2>
+
+      <label for="habitSelect">Select Habit</label>
+      <select id="habitSelect">
+        <option value="all">All Habits</option>
+        <option value="drinkWater">Drink Water</option>
+        <option value="steps">Steps</option>
+        <option value="sleep">Sleep</option>
+      </select>
+
+      <label for="reminderTime">Time (HH:MM)</label>
+      <input id="reminderTime" type="time" />
+
+      <label for="frequency">Frequency</label>
+      <select id="frequency">
+        <option value="once">Once</option>
+        <option value="daily">Daily</option>
+        <option value="weekly">Weekly</option>
+        <option value="monthly">Monthly</option>
+      </select>
+
+      <button id="saveReminderBtn" type="button">Save Reminder</button>
+      <p id="reminderMsg" style="color:green"></p>
+    </section>
+
+    <section class="card" id="reminderListSection" style="display:none;">
+      <h2>Your Reminders</h2>
+      <ul id="reminderList"></ul>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+  <script src="reminders.js"></script>
+</body>
+</html>
